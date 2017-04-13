@@ -29,7 +29,7 @@
     <div class="content">
         <p class="big-title">Welcome!</p>
         <p class="small-title">I'm Norton, this is my page, it's building!</p>
-        <p class="small-title"><a href="http://www.coolde.cn">Coolde<a></p>
+        <p class="small-title"><a href="js-format">js-format<a></p>
 
     </div>
 </body>
