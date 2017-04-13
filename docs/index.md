@@ -1,4 +1,4 @@
-<link href="assets/style.css" rel="stylesheet"></link>
+<link href="assets/css/page.css" rel="stylesheet" />
 # Home
 
 ## [js-format](./js-format)
