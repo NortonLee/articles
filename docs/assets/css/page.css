@@ -1,7 +1,12 @@
 body{
     background: #eee;
+    padding:0 20px;
 }
 
 a{
     color:rgb(67, 144, 238);
+}
+
+.foot-image{
+    background-image: url(images/33510132.jpg)
 }
