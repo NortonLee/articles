@@ -1,6 +1,6 @@
 # Home
 
-## [js-format](articles/js-form.html)
+## [js-format](/js-form.html)
 
 ## [Coold](http://www.coolde.cn)
 
