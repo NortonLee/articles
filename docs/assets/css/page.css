@@ -7,6 +7,12 @@ a{
     color:rgb(67, 144, 238);
 }
 
+.container{
+    width: 100%;
+}
+
 .foot-image{
-    background-image: url(../../images/33510132.jpg)
+    height: 200rem;
+    background: url(../../images/33510132.jpg) no-repeat;
+    background-size: 100%;
 }
