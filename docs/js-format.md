@@ -1,14 +1,14 @@
 # js-format
 
-    <code>
+<code>
     /** * 替换所有匹配exp的字符串为指定字符串 * @param exp 被替换部分的正则 * @param newStr 替换成的字符串 */
     String.prototype.replaceAll = function (exp, newStr) {
       return this.replace(new RegExp(exp, "gm"), newStr);
     };
-    </code>
+</code>
  
 
-    <code>
+<code>
      * 原型：字符串格式化
      * @param args 格式化参数值
      */
@@ -31,4 +31,4 @@
         }
         return result;
     }
-    </code>
+ </code>
