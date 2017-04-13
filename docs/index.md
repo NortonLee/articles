@@ -5,4 +5,4 @@
 
 ## [Coold](http://www.coolde.cn)
 
-<div style="foot-image"></div>
+<div class="foot-image"></div>
