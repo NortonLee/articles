@@ -1,6 +1,7 @@
-# 首页
+# Home
 
-[js-form](/js-form.html);
-[Coold](http://www.coolde.cn)
+## [js-format](articles/js-form.html)
+
+## [Coold](http://www.coolde.cn)
 
 ![image](images/33510132.jpg)
