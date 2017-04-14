@@ -7,6 +7,4 @@
 
 ## [Coold](http://www.coolde.cn)
 
-[TOC]
-
 <div class="foot-image"></div>
