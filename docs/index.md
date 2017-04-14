@@ -1,7 +1,11 @@
 <link href="assets/css/page.css" rel="stylesheet" />
 # Home
 
+[DOC]
+
 ## [js-format](./js-format)
+
+## [Markdown](./markdown)
 
 ## [Coold](http://www.coolde.cn)
 
