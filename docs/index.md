@@ -1,7 +1,7 @@
 <link href="assets/css/page.css" rel="stylesheet" />
 # Home
 
-[DOC]
+[TOC]
 
 ## [js-format](./js-format)
 
