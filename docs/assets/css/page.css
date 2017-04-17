@@ -39,7 +39,6 @@ a{
 
 .content{
     padding:0 20px;
-    
 }
 
 .footer{
@@ -47,9 +46,9 @@ a{
     bottom: 10px;
     text-align: center;
     width: 100%;
-    font-size:14px;
 }
 
 .footer p{
     color: #333;
+    font-size:14px;
 }
