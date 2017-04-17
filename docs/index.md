@@ -4,7 +4,8 @@
 <div class="sub-title">2017 精进</div>
 </div>
 
----
+> 
+
 [js-format](./js-format)
 
 ---
@@ -15,6 +16,8 @@
  
 ---
 [Coold](http://www.coolde.cn)
+
+---
 
 <div class="footer">
     <p>Copyright ©2015-2017 by Norton Li</p>

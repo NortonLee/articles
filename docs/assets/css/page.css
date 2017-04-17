@@ -27,6 +27,11 @@ a{
     font-size: 25px;
 }
 
+.markdown-body hr{
+    width: 90%;
+    height:0.1em;
+}
+
 .sub-title{
     font-size:18px;
     padding: 0 20px;
