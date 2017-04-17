@@ -1,5 +1,6 @@
+<title></title>
 <link href="assets/css/page.css" rel="stylesheet" />
-<div style="background:#888">主页</div>
+<div class="item-header">主页</div>
 
 ## [js-format](./js-format)
 

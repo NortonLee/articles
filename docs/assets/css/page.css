@@ -16,3 +16,10 @@ a{
     background: url(../../images/33510132.jpg) no-repeat;
     background-size: 100%;
 }
+
+.item-header{
+    background:#3b73af;
+    color: #fff;
+    width:100%;
+    min-height: 80px;
+}

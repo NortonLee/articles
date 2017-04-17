@@ -112,10 +112,50 @@
 小红|女|95
 小李|男|74
 13. 分割线
-* * *
-***
-*********
 
-- - - 
+ * * *
+ ***
+ *********
 
--------------------
+ - - - 
+
+ -------------------
+
+14. 代码
+    14.1 行内式
+    使用行内式展示`code`
+    14.2 缩进式多行代码
+
+        #include <stdio.h>
+        int main(void)
+        {
+            printf("Hello world\n");
+        }
+        
+    14.3 使用六个`包裹多行代码
+    ```
+    #include <stdio.h>
+    int main(void)
+    {
+        printf("Hello world\n");
+    }
+    ```
+    14.4 HTML代码
+    第一个例子：
+    <div class="footer">
+        &copy; 2017 Foo Corporation
+    </div>
+    第二个列子：
+    <table>
+        <tr>
+            <th rowspan="2">值班人员</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+        </tr>
+        <tr>
+            <td>李强</td>
+            <td>张明</td>
+            <td>王平</td>
+        </tr>
+    </table>
