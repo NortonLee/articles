@@ -1,6 +1,5 @@
 body{
     background: #eee;
-    padding:0 20px;
 }
 
 a{
@@ -11,15 +10,23 @@ a{
     width: 100%;
 }
 
-.foot-image{
-    height: 200rem;
-    background: url(../../images/33510132.jpg) no-repeat;
-    background-size: 100%;
-}
-
 .item-header{
-    background:#3b73af;
+    background:url(../images/home-bg.jpg);
     color: #fff;
     width:100%;
-    min-height: 80px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    font-size: 48px;
+    padding: 0 20px;
+}
+
+.sub-title{
+    font-size:18px;
+    padding: 0 20px;
+}
+
+.content{
+    padding:0 20px;
 }
