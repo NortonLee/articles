@@ -22,6 +22,11 @@ a{
     padding: 3% 20px;
 }
 
+.sub-title{
+    font-size:18px;
+    padding: 0 20px;
+}
+
 .markdown-body p{
     padding: 0 20px;
     font-size: 25px;
@@ -30,11 +35,6 @@ a{
 .markdown-body hr{
     width: 90%;
     height:0.1em;
-}
-
-.sub-title{
-    font-size:18px;
-    padding: 0 20px;
 }
 
 .content{
