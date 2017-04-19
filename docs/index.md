@@ -21,7 +21,9 @@
 [Coold](http://www.coolde.cn)
 
 ---
+[Python]
 
+---
 <div class="footer">
     <p>Copyright ©2015-2017 by Norton Li</p>
 </div>
