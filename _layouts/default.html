@@ -6,22 +6,16 @@
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
     <meta name="author" content="Norton.Li" />
     <title>{{ page.title }} - @Norton.Li</title>
-    <link rel="stylesheet" href="/assets/css/page.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="assets/css/page.css" type="text/css" media="screen, projection" />
 </head>
 
 <body>
-
-    <!-- ClickTale Top part -->
-    <script type="text/javascript">
-        var WRInitTime = (new Date()).getTime();
-    </script>
-    <!-- ClickTale end of Top part -->
-
     <div class="site">
         <div class="header">
             <p>Blog</p>
             <div class="sub-title">2017 精进</div>
         </div>
+        {{maruku.use_tex}}
 
         {{ content }}
 

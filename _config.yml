@@ -1,0 +1,5 @@
+source:      .
+destination: ./_site
+# timezone:    UTC
+baseurl:     '/articles'
+gems:  [tzinfo]
