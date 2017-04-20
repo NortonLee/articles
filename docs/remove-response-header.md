@@ -28,8 +28,8 @@
 	        </customHeaders>
 	      </httpProtocol>
 	  </system.webServer>
+	  
 ## 3. Server
-
 > Server标识的是web服务器处理程序信息和程序的版本信息，比如 "Microsoft-IIS/7.5", "nginx/1.0.11", "Apache"等等。
 
 移除方式：在Global文件中，重写HttpApplication Init方法。
