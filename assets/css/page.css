@@ -81,11 +81,13 @@ ul.posts li {
 .content{
     padding:0 20px;
 }
+
 .post-content{
     width: 50em;
     margin: 3em auto 2em auto;
     text-align: justify;
 }
+
 #related{
     padding: 0 20px;
     margin-top: 2em;
