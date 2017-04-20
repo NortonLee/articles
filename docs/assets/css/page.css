@@ -27,9 +27,8 @@ a{
     padding: 0 20px;
 }
 
-.markdown-body p{
+.markdown-body h3{
     padding: 0 20px;
-    font-size: 25px;
 }
 
 .markdown-body hr{
