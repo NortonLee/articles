@@ -24,6 +24,9 @@
 [Python]
 
 ---
+[移除 Response Header中标识ASP.NET的信息](./remove-response-header)
+
+---
 <div class="footer">
     <p>Copyright ©2015-2017 by Norton Li</p>
 </div>
