@@ -1,8 +1,14 @@
-<link href="assets/css/page.css" rel="stylesheet" />
-# 移除 Response Header中标识ASP.NET的信息
+---
+layout: post
+title: 移除 Response Header中标识ASP.NET的信息
+---
+
+{{ page.title }}
+===
+
 > 正常情况下，请求服务端api时，服务端会在Response Header中返回服务器的一些信息，比如服务器版本，所用的技术信息等等。  有时候我们并不想让请求端看到这些信息。
 
-![ResponsHeader](assets/images/2017-doc/response-header.png)
+![ResponsHeader](../../../assets/images/2017-doc/response-header.png)
   
 使用.NET框架时，我们关注的Response Header主要是四个：X-AspNet-Version,Server,X-Powered-By,X-AspNetMvc-Version。
   
