@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+
+a{
+    color:rgb(67, 144, 238);
+}
+
+.container{
+    width: 100%;
+	padding: 0 20px;
+}
+
+.site {
+    font-size: 110%;
+    text-align: justify;
+    width: 100%;
+    line-height: 1.5em;
+}
+
+.header{
+    background:url(../images/home-bg.jpg);
+    color: #fff;
+    width:100%;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    font-size: 48px;
+    text-align: center;
+}
+
+.header p{
+    padding-top: 1em;
+}
+
+.sub-title{
+    font-size:18px;
+    padding: 20px;
+}
+
+ul.posts{
+    list-style-type: none;
+    margin-bottom: 2em;
+    margin-top:2em;
+}
+
+#post{
+    padding: 0 20px;
+    width: 100%;
+}
+
+#post p{
+    padding: 10px 0;
+}
+
+ul.posts li {
+    line-height: 1.75em;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.markdown-body h3{
+    padding: 0 20px;
+}
+
+.markdown-body hr{
+    width: 90%;
+    height:0.1em;
+}
+
+.content{
+    padding:0 20px;
+}
+
+#related{
+    padding: 0 20px;
+}
+
+#related .related-post{
+    list-style-type: none;
+    margin-bottom: 2em;
+}
+
+#related .related-post li {
+    line-height: 1.75em;
+    padding: 0 20px;
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #eee;
+    margin: 2em 0;
+}
+
+.footer p{
+    color: #333;
+    font-size:14px;
+}
