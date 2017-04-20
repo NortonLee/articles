@@ -4,6 +4,7 @@
 }
 body{
     background-color: white;
+    text-align: center;
 }
 
 a{
@@ -18,8 +19,13 @@ a{
 .site {
     font-size: 110%;
     text-align: justify;
-    width: 100%;
+    width: 50em;
+    margin: 3em auto 2em auto;
     line-height: 1.5em;
+}
+
+ul.posts li > a{
+    text-decoration: none;
 }
 
 .header{
@@ -51,7 +57,6 @@ ul.posts{
 
 #post{
     padding: 0 20px;
-    width: 100%;
 }
 
 #post p{
@@ -76,9 +81,14 @@ ul.posts li {
 .content{
     padding:0 20px;
 }
-
+.post-content{
+    width: 50em;
+    margin: 3em auto 2em auto;
+    text-align: justify;
+}
 #related{
     padding: 0 20px;
+    margin-top: 2em;
 }
 
 #related .related-post{
@@ -101,4 +111,15 @@ ul.posts li {
 .footer p{
     color: #333;
     font-size:14px;
+}
+
+@media screen and (max-width:736px){
+    .site{
+        width: 100%;
+        margin: 0;
+    }
+    .post-content{
+        width:100%;
+        margin: 0;
+    }
 }
