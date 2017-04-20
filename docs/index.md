@@ -1,13 +1,8 @@
-<head>
-<title>Blog - Norton.Li</title>
 <link href="assets/css/page.css" rel="stylesheet" />
 <link rel="shortcut icon" href="favicon.ico">
-</head>
 <div class="item-header">Blog
 <div class="sub-title">2017 精进</div>
 </div>
-
-> 
 
 ### [js-format](./js-format)
 
