@@ -7,6 +7,7 @@
 使用.NET框架时，我们关注的Response Header主要是四个：X-AspNet-Version,Server,X-Powered-By,X-AspNetMvc-Version。
   
 ## 1. X-AspNet-Version
+
 > X-AspNet-Version标识的是IIS中运行的.Net Framework CRL的版本信息。
 
 移除方式：在web.config中添加如下节点。
@@ -14,6 +15,7 @@
 	<system.web>
 		<httpRuntime enableVersionHeader="false"></httpRuntime>  
 	</system.web>
+	
 ## 2. X-Powered-By
 > 其他服务端语言都会返回X-Powered-By这个信息。
 
@@ -27,6 +29,7 @@
 	      </httpProtocol>
 	  </system.webServer>
 ## 3. Server
+
 > Server标识的是web服务器处理程序信息和程序的版本信息，比如 "Microsoft-IIS/7.5", "nginx/1.0.11", "Apache"等等。
 
 移除方式：在Global文件中，重写HttpApplication Init方法。
