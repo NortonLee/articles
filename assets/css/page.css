@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body{
-    
+    background-color: white;
+    font: 13.34px helvetica, arial, clean, sans-serif;
+    text-align: center;
 }
 
 a{
@@ -9,6 +15,14 @@ a{
 .container{
     width: 100%;
 	padding: 0 20px;
+}
+
+.site {
+    font-size: 110%;
+    text-align: justify;
+    width: 80%;
+    margin: 3em auto 2em auto;
+    line-height: 1.5em;
 }
 
 .item-header{
@@ -42,10 +56,11 @@ a{
 }
 
 .footer{
-    position: absolute;
-    bottom: 10px;
     text-align: center;
     width: 100%;
+    margin-top: 2em;
+    border-top: 4px solid #eee;
+    overflow: hidden;
 }
 
 .footer p{
