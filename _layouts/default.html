@@ -1,11 +1,6 @@
-{% include header.html %}
-
+---
+layout: layout
+---
 <div class="site">
-    <div class="header">
-        <p>Blog</p>
-        <div class="sub-title">2017 精进</div>
-    </div>
     {{kramdown.use_tex}} {{ content }}
 </div>
-
-{% include footer.html %}

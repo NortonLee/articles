@@ -32,7 +32,7 @@ ul.posts li > a{
     background:url(../images/home-bg.jpg);
     color: #fff;
     width:100%;
-    min-height: 200px;
+    min-height: 6em;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 40%;
@@ -40,13 +40,31 @@ ul.posts li > a{
     text-align: center;
 }
 
+.header-content{
+    background-color:rgba(0,0,0,0.3);
+    width:100%;
+    min-height: 6em;
+}
+
+.header a{
+    text-decoration: none;
+    color:#fff;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.header a:hover{
+    text-decoration: none;
+    color:rgb(67, 144, 238);
+}
+
 .header p{
-    padding-top: 1em;
+    padding-top: 2em;
 }
 
 .sub-title{
     font-size:18px;
-    padding: 20px;
+    padding: 10px;
 }
 
 ul.posts{
@@ -122,6 +140,10 @@ ul.posts li {
     }
     .post-content{
         width:100%;
-        margin: 0;
+        margin-top: 2em;
+    }
+
+    .post-content h1{
+        font-size: 20px;
     }
 }
