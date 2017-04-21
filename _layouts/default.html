@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+{% include header.html %}
 
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="author" content="Norton.Li" />
-    <title>{{ page.title }} - @Norton.Li</title>
-    <link rel="stylesheet" href="assets/css/page.css" type="text/css" media="screen, projection" />
-</head>
-
-<body>
-    <div class="site">
-        <div class="header">
-            <p>Blog</p>
-            <div class="sub-title">2017 精进</div>
-        </div>
-        {{maruku.use_tex}}
-
-        {{ content }}
-
-        <div class="footer">
-            <p>
-                <a href="https://github.com/nortonlee/">github.com/nortonlee</a><br />
-                <a href="mailto:lizard@yeah.net">lizard@yeah.net</a><br />
-            </p>
-            <p>Copyright ©2015-2017 by Norton Li</p>
-        </div>
+<div class="site">
+    <div class="header">
+        <p>Blog</p>
+        <div class="sub-title">2017 精进</div>
     </div>
-</body>
+    {{kramdown.use_tex}} {{ content }}
+</div>
 
-</html>
+{% include footer.html %}

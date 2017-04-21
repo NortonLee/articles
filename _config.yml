@@ -5,3 +5,4 @@ baseurl:     '/articles'
 gems:  [tzinfo]
 markdown: kramdown
 markdown_ext:  markdown,mkd,mkdn,md
+highlighter: pygments
