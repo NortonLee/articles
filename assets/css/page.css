@@ -28,7 +28,7 @@ ul.posts li > a{
 }
 
 .header{
-    background:url(../images/home-bg.jpg);
+    background:url(../images/home-bg.png);
     color: #fff;
     width:100%;
     min-height: 6em;
@@ -37,6 +37,24 @@ ul.posts li > a{
     background-position: 50% 40%;
     font-size: 48px;
     text-align: center;
+}
+
+.header{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    -webkit-transition: All 2s ease;
+    -moz-transition: All 2s ease;
+    -o-transition: All 2s ease;
+    -ms-transition: All 2s ease;
+    transition: All 2s ease;
+    background-color: #f5f5d5;
 }
 
 .header-content{
