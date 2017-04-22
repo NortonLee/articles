@@ -4,9 +4,14 @@ title: Blog
 ---
 
 <div id="home">
-  <ul class="posts">
+  {% for category in site.categories %}
+    <div class="category"> {{ category | first }} ({{ category.last.size }}) </div>
+    <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> <a href="/articles{{ post.url }}">{{ post.title }}</a></li>
+        {% if category.first == post.category %}
+        <li><span>{{ post.date | date: "%F" }}</span> <a href="/articles{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
     {% endfor %}
   </ul>
+  {% endfor %}
 </div>
