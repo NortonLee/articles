@@ -17,7 +17,6 @@ a{
 }
 
 .site {
-    font-size: 110%;
     text-align: justify;
     width: 50em;
     margin: 3em auto 2em auto;
@@ -46,20 +45,50 @@ ul.posts li > a{
     min-height: 6em;
 }
 
-.header a{
+.header .sub-home,
+.header .ico-wechat,
+.header .ico-weibo,
+.header .ico-github,
+.header .ico-home{
     text-decoration: none;
     color:#fff;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
 
-.header a:hover{
+.header .sub-home:hover{
     text-decoration: none;
     color:rgb(67, 144, 238);
 }
 
+.header .ico-wechat:hover{
+    color: #44b549;
+}
+
+.header .ico-weibo:hover{
+    color: #E6162D;
+}
+
+.header .ico-github:hover{
+    color: #000;
+}
+
+.header .ico-home:hover{
+    color:#9cc8ff;
+}
+
 .header p{
     padding-top: 2em;
+}
+
+.header ul>li{
+    display: inline-block;
+    margin: 0 .2em;
+    font-size: .5em;
+}
+
+.header ul>li>a{
+    color: #fff;
 }
 
 .sub-title{
@@ -79,6 +108,10 @@ ul.posts{
 
 #post p{
     padding: 10px 0;
+}
+
+#post img{
+    width:100%;
 }
 
 ul.posts li {
@@ -107,25 +140,33 @@ ul.posts li {
 }
 
 #related{
-    padding: 0 20px;
-    margin-top: 2em;
+    padding: 1em;
 }
+
+#related h2{
+    margin-bottom: .5em;
+}
+
 
 #related .related-post{
     list-style-type: none;
-    margin-bottom: 2em;
 }
 
 #related .related-post li {
-    line-height: 1.75em;
+    line-height: 2em;
     padding: 0 20px;
+    font-size: .8em;
 }
 
+#related .related-post li>a {
+    text-decoration: none;
+    text-align: justify;
+}
 .footer{
     text-align: center;
     width: 100%;
     border-top: 2px solid #eee;
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .footer p{
@@ -146,4 +187,25 @@ ul.posts li {
     .post-content h1{
         font-size: 20px;
     }
+}
+
+blockquote {
+    border-left: 2px solid #9cc8ff;
+    color: #595959;
+    margin: 1.5em 0;
+    padding-left: 0.75em;
+    font-size: 90%;
+}
+
+#post figure {
+    border: 1px solid #eee;
+    background: #eee;
+    border-radius: 5px;
+    line-height: 1.5;
+    margin: 1em 0;
+    padding: 1em 1em;
+    overflow: auto;
+    webkit-box-shadow: inset 0 1px 10px #eee, 0 1px 0 #eee, 0 -1px 0 #eee;
+    -moz-box-shadow: inset 0 1px 10px #eee, 0 1px 0 #eee, 0 -1px 0 #eee;
+    box-shadow: inset 0 1px 10px #eee, 0 1px 0 #eee, 0 -1px 0 #eee;
 }
