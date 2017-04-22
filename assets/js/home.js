@@ -4,8 +4,8 @@ var current_img_num;
 var img_num = 107;
 
 function backgroundImage() {
-    var img_path = '/assets/images/';
-    //var img_path = 'http://localhost:8080/assets/images/';
+    // var img_path = '/assets/images/';
+    var img_path = 'http://localhost:8080/assets/images/';
     var random_img_num = function () {
         return Math.floor(Math.random() * img_num + 1);
     };

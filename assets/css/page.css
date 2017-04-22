@@ -27,6 +27,12 @@ ul.posts li > a{
     text-decoration: none;
 }
 
+#home .category{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding:0 0 .5em 1em;
+}
+
 .header{
     background:url(../images/home-bg.png);
     color: #fff;
@@ -116,8 +122,7 @@ ul.posts li > a{
 
 ul.posts{
     list-style-type: none;
-    margin-bottom: 2em;
-    margin-top:2em;
+    margin-bottom: 1em;
 }
 
 #post{
@@ -135,7 +140,7 @@ ul.posts{
 ul.posts li {
     line-height: 1.75em;
     padding: 0 20px;
-    font-size: 18px;
+    font-size: 1em;
 }
 
 .markdown-body h3{
@@ -195,7 +200,7 @@ ul.posts li {
 @media screen and (max-width:736px){
     .site{
         width: 100%;
-        margin: 0;
+        margin-top: 2em;
     }
     .post-content{
         width:100%;
