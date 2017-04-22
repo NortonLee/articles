@@ -21,7 +21,7 @@ function backgroundImage() {
         current_image = img_url(current_img_num);
     }
 
-    preLoadImg(img_url(next_img_num));
+    // preLoadImg(img_url(next_img_num));
 
     var header = $(".header").get(0).style;
     header.backgroundSize = 'cover';
