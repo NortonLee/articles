@@ -127,14 +127,16 @@ ul.posts{
 
 #post{
     padding: 0 20px;
-}
-
-#post p{
-    padding: 10px 0;
+    line-height: 2em;
 }
 
 #post img{
-    width:100%;
+    width:80%;
+}
+
+#post ol{
+    padding: 0 1em;
+    color: #595959;
 }
 
 ul.posts li {

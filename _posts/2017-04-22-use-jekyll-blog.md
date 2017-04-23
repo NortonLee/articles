@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用Jekyll搭建GitHub Project Pages
-category: 工具类
+category: 工具
 ---
 {{ page.title }}
 ===
