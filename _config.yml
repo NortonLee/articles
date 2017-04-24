@@ -1,8 +1,15 @@
 source:      .
 destination: ./_site
-# timezone:    UTC
+github: NortonLee
+author: 'Norton.Li|李驰'
 baseurl:     '/articles'
 gems:  [tzinfo]
 markdown: kramdown
 markdown_ext:  markdown,mkd,mkdn,md
 highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title.html
+all_categories: [
+  ["tech", "技术","/posts/tech.html"], 
+  ["tools", "工具","/posts/tools.html"]
+]
+# paginate: 8

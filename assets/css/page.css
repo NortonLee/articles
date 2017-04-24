@@ -139,6 +139,10 @@ ul.posts{
     color: #595959;
 }
 
+#post ol>li>ul{
+    padding: 0 20px;
+}
+
 ul.posts li {
     line-height: 1.75em;
     padding: 0 20px;

@@ -7,10 +7,32 @@ category: 工具
 ===
 > 本文记录使用Jekyll搭建个人博客并且部署到GitHub。
 
-    1. Ruby, GEM 环境配置
-    2. Jekyll 安装
-    3. 项目结构目录
-    4. 文章列表展示
-    5. 文章分类
-    6. 使用评论插件
-    7. 使用文章分享插件
+1. Windows环境下Ruby, GEM 环境配置
+    * 安装rubyinstaller
+    * 安装RubyGems 包管理工具
+
+        ruby setup.rb
+2. Jekyll 安装
+
+    gem install jekyll
+3. 项目结构目录
+4. 文章列表展示
+5. 文章分类
+6. 列表分页
+7. 使用评论插件
+8. 使用文章分享插件
+9. 本地中文路径编码
+    
+   > 修改安装目录\Ruby22-x64\lib\ruby\2.2.0\webrick\httpservlet下的filehandler.rb文件
+
+{% highlight python %}
+path = req.path_info.dup.force_encoding(Encoding.find("filesystem"))
++ path.force_encoding("UTF-8") # 加入编码
+trailing_pathsep?(req.path_info)
+{% endhighlight %}
+
+{% highlight python %}
+break if base == "/"
++ base.force_encoding("UTF-8") #加入編碼
+break unless File.directory?(File.expand_path(res.filename + base))
+{% endhighlight %}
