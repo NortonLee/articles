@@ -14,8 +14,8 @@ style.FillPattern = FillPattern.SolidForeground;
 ICell cell = workbook.CreateSheet().CreateRow(0).CreateCell(0);
 cell.CellStyle = style;
 {% endhighlight %}
-<table style="width: 80%;" border="1" cellspacing="0" cellpadding="0">
-<tbody>
+<table style="width: 80%;text-align:center;background:#333;" border="0" cellspacing="1" cellpadding="1">
+<tbody style="background:#fff;">
 <tr class="firstRow" valign="bottom">
 <td class="xl6311023" width="64" height="17">颜色</td>
 <td class="xl6511023" width="204">Class名称</td>
