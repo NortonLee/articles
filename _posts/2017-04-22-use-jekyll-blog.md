@@ -30,8 +30,8 @@ category: 工具
 7. 使用评论插件
 8. 使用文章分享插件
 9. 本地中文路径编码
-    
-   > 修改安装目录\Ruby22-x64\lib\ruby\2.2.0\webrick\httpservlet下的filehandler.rb文件
+>
+    修改安装目录\Ruby22-x64\lib\ruby\2.2.0\webrick\httpservlet下的filehandler.rb文件
 
 {% highlight python %}
 path = req.path_info.dup.force_encoding(Encoding.find("filesystem"))
@@ -45,6 +45,6 @@ break if base == "/"
 break unless File.directory?(File.expand_path(res.filename + base))
 {% endhighlight %}
 
-10. 访问统计
+ 10\. 访问统计
 
-11. 404页面配置
+ 11\. 404页面配置
