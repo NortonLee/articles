@@ -46,3 +46,5 @@ break unless File.directory?(File.expand_path(res.filename + base))
 {% endhighlight %}
 
 10. 访问统计
+
+11. 404页面配置
