@@ -48,3 +48,13 @@ break unless File.directory?(File.expand_path(res.filename + base))
  10\. 访问统计
 
  11\. 404页面配置
+
+使用腾讯公益404页面，在项目根目录下添加404.html页面，加入以下代码：
+{% highlight js %}
+<script type="text/javascript" 
+        src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" 
+        charset="utf-8" 
+        homePageUrl="/" 
+        homePageName="返回继续">
+</script>
+{% endhighlight %}
