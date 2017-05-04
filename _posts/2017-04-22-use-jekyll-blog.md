@@ -35,6 +35,14 @@ category: 工具
 
     如上图所示，我在文章详情的模版页中加入畅言提供的js，这样所有详情页面便会有畅言的评论功能了。
 8. 使用文章分享插件
+>  文章分享使用的是bShare社会化分享插件，在文章详情页面添加以下js即可。
+
+{% highlight js %}
+<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a>
+<script type="text/javascript" charset="utf-8" 
+        src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=3&amp;fs=4&amp;textcolor=#000&amp;bgcolor=#DDD&amp;text=分享到">
+</script>
+{% endhighlight %}
 9. 本地中文路径编码
 >
     修改安装目录\Ruby22-x64\lib\ruby\2.2.0\webrick\httpservlet下的filehandler.rb文件
