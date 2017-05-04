@@ -6,6 +6,13 @@ layout: default
   <div id="post">
     {{ content }}
   </div>
+  <div class="tags">
+   {% for tag in site.tags %}
+        {% if page.tags contains tag.first %}
+        <span>{{tag.first}}</span>
+        {% endif %}
+   {% endfor %}
+  </div>
 
   <div id="related">
     <h2>Latest Post</h2>

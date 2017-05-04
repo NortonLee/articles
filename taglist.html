@@ -1,20 +1,19 @@
 ---
 layout: default
-title: Blog
+title: Tag
 ---
-
 <div id="home">
-  {% for category in site.categories %}
-    <div class="category"> {{ category | first }} ({{ category.last.size }}) </div>
+   {% for tag in site.tags %}
+    <div class="category"> {{ tag | first }} ({{ tag.last.size }}) </div>
     <ul class="posts">
-    {% for post in site.posts %}
-        {% if category.first == post.category %}
+      {% for post in site.posts %}
+        {% if post.tags contains tag.first %}
         <li>
           <span>{{ post.date | date: "%F" }}</span> 
           <a href="/articles{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endif %}
-    {% endfor %}
+      {% endfor %}
   </ul>
   {% endfor %}
 </div>

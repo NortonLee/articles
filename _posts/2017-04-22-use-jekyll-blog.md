@@ -2,6 +2,7 @@
 layout: post
 title: 使用Jekyll搭建GitHub Project Pages
 category: 工具
+tags: GitPages 静态博客 Jekyll
 ---
 {{ page.title }}
 ===
