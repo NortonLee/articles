@@ -9,7 +9,7 @@ layout: default
   <div class="tags">
    {% for tag in site.tags %}
         {% if page.tags contains tag.first %}
-        <span>{{tag.first}}</span>
+        <span><a target="_blank" href="/articles/taglist.html">{{tag.first}}</a></span>
         {% endif %}
    {% endfor %}
   </div>
