@@ -62,6 +62,24 @@ break unless File.directory?(File.expand_path(res.filename + base))
 
  10\. 访问统计
 
+ 访问统计使用的是百度的网站统计，注册后获取js追踪代码，既可在百度统计管理后台看到对应的访客数据。
+ {% highlight js %}
+ <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?1a6df2e9fe5e42319ae9746603c45f5f";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+{% endhighlight %}
+
+将以上代码添加到模版文件的head部位就可以了。
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\10.png)
+
+
  11\. 404页面配置
 
 使用腾讯公益404页面，在项目根目录下添加404.html页面，加入以下代码：
