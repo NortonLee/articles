@@ -73,3 +73,29 @@ break unless File.directory?(File.expand_path(res.filename + base))
         homePageName="返回继续">
 </script>
 {% endhighlight %}
+
+12\. CDN配置
+
+由于GitHub服务器在国外，国内访问有时候会非常慢，选择了几款CDN产品，目前腾讯云有赠送几个月的CDN产品试用，所以就拿腾讯云练手了。
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\5.png)
+
+ 添加域名后会给你的网站分配一个加速域名，www.coolde.cn.cdn.dnsv1.com，这个域名是加速域名到CDN节点的地址，直接访问无法获取到资源。
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\6.png)
+
+然后将需要加速的域名国内访问解析到上述的加速域名上，国外仍然保持直接访问github服务器。
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\9.png)
+
+设置完成后ping所要加速的域名，如果返回包含spcdntip节点的内容，说明CDN配置成功！
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\7.png)
+
+接下来在CDN配置中设置缓存配置，一般将静态资源比如html，js，css等不经常修改的文件设置稍微长时间的刷新时间，如果有动态内容比如aspx，php，jsp等文件，一般设置较短时间的刷新时间。当然可以根据自身情况，设置对应文件的刷新时长。
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\8.png)
+
+如果修改了长刷新时间较长的文件内容，但又想立即看到更新，便可以使用上述功能进行手动更新，可以更新某一个文件或者某一个目录下所有文件。
+
+以上CDN配置完成后，国内访问基本可以达到秒开的速度，体验还是非常不错的！
