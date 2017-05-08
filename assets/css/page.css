@@ -203,6 +203,10 @@ ul.posts li {
     font-size:14px;
 }
 
+.footer a{
+    text-decoration: none;
+}
+
 @media screen and (max-width:736px){
     .site{
         width: 100%;
