@@ -7,7 +7,7 @@ gems:  [tzinfo]
 markdown: kramdown
 markdown_ext:  markdown,mkd,mkdn,md
 highlighter: rouge
-permalink: /:categories/:year/:month/:day/:title‹Hi,I'm·Norton›
+permalink: /:categories/:year/:month/:day/:title
 all_categories: [
   ["tech", "技术","/posts/tech.html"], 
   ["tools", "工具","/posts/tools.html"]
