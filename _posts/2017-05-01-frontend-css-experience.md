@@ -12,3 +12,10 @@ tags: 前端 css
 
 1. div中文本换行展示
 > white-space:normal;
+
+2. 禁止页面选中复制
+>-moz-user-select: none; <br>
+>-webkit-user-select: none; <br>
+>-ms-user-select: none; <br>
+>-khtml-user-select: none; <br>
+>user-select: none; <br>
