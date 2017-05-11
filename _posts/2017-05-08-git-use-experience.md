@@ -32,3 +32,6 @@ tags: Git
 4. 设置文本编辑器，用来commit时候填写comments。
 > [core]<br>
 > editor = \"D:\\Program Files (x86)\\Tools\\Notepad.exe\"
+
+5. 撤销单个文件
+> git checkout -- filepath
