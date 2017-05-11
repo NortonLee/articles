@@ -26,16 +26,37 @@ tags: GitPages 静态博客 Jekyll
     * _site Jekyll 生成的静态网站目录，在.gitignore中排除该目录。
     * assets 存放样式、js脚本、图片等资源文件。
 4. 文章列表展示
-5. 文章分类
-6. 列表分页
-7. 使用评论插件
+{% highlight html %}
+<div id="home">
+  {\% for category in site.categories \%}
+    <div class="category"> \{\{ category | first \}\} (\{\{ category.last.size \}\}) </div>
+    <ul class="posts">
+    \{\% for post in site.posts \%\}
+        \{\% if category.first == post.category \%\}
+        <li>
+          <span>\{\{ post.date | date: "%d/%m/%Y" \}\}</span> 
+          <a href="/articles{{ post.url }}">\{\{ post.title \}\}</a>
+        </li>
+        \{\% endif \%\}
+    \{\% endfor \%\}
+  </ul>
+  \{\% endfor \%\}
+</div>
+{% endhighlight %}
+高亮部分代码需要添加转义，所以看到的内容多了个\字符。site.categories会查找config文件中定义的分类，或者在每个页面指定的分类集合。
 
-    之前的Coolde博客中使用的是<strong>多说</strong>评论插件，前段时间收到通知，多说即将要关闭评论服务了，所以在本博中使用的是<strong>畅言</strong>。使用方式也是在需要出现评论的页面上引入js。不过畅言插件需要使用的域名必须要备案，否则只能试用。
+5\. 文章分类
 
-    ![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\1.png)
+6\. 列表分页
 
-    如上图所示，我在文章详情的模版页中加入畅言提供的js，这样所有详情页面便会有畅言的评论功能了。
-8. 使用文章分享插件
+7\. 使用评论插件
+
+之前的Coolde博客中使用的是<strong>多说</strong>评论插件，前段时间收到通知，多说即将要关闭评论服务了，所以在本博中使用的是<strong>畅言</strong>。使用方式也是在需要出现评论的页面上引入js。不过畅言插件需要使用的域名必须要备案，否则只能试用。
+
+![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170501\1.png)
+
+如上图所示，我在文章详情的模版页中加入畅言提供的js，这样所有详情页面便会有畅言的评论功能了。
+8\. 使用文章分享插件
 >  文章分享使用的是bShare社会化分享插件，在文章详情页面添加以下js即可。
 
 {% highlight js %}
@@ -44,7 +65,7 @@ tags: GitPages 静态博客 Jekyll
         src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=3&amp;fs=4&amp;textcolor=#000&amp;bgcolor=#DDD&amp;text=分享到">
 </script>
 {% endhighlight %}
-9. 本地中文路径编码
+9\. 本地中文路径编码
 >
     修改安装目录\Ruby22-x64\lib\ruby\2.2.0\webrick\httpservlet下的filehandler.rb文件
 
