@@ -19,3 +19,6 @@ tags: 前端 css
 >-ms-user-select: none; <br>
 >-khtml-user-select: none; <br>
 >user-select: none; <br>
+
+3. 圆角边框
+> border-radius:15px;
