@@ -47,6 +47,9 @@ tags: GitPages 静态博客 Jekyll
 
 5\. 文章分类
 
+site.categories
+上述文章列表中已经提到分类。
+
 6\. 列表分页
 
 7\. 使用评论插件
