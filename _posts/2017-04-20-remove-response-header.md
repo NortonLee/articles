@@ -2,7 +2,7 @@
 layout: post
 title: 移除 Response Header中标识ASP.NET的信息
 category: 技术
-tags: 后端 ASP.NET
+tags: .NET
 ---
 
 {{ page.title }}
