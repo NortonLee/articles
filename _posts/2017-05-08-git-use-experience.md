@@ -35,3 +35,6 @@ tags: Git
 
 5. 撤销单个文件
 > git checkout -- filepath
+
+6. 查看远端分支
+> git branch -a
