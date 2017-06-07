@@ -41,3 +41,6 @@ tags: Git
 
 7. 查看远端分支
 > git branch -r
+
+8. 基于分支新建一个分支
+> git co -b based_on_branch new_branch
