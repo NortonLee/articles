@@ -44,3 +44,6 @@ tags: Git
 
 8. 基于分支新建一个分支
 > git co -b based_on_branch new_branch
+
+9. Git Flow
+> ![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170618\1.png)
