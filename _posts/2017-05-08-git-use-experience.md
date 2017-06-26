@@ -47,3 +47,6 @@ tags: Git
 
 9. Git Flow
 > ![content-image]({{ BASE_PATH }}\articles\assets\images\2017-doc\20170618\1.png)
+
+10. 重命名分支
+> git branch -m devel develop
