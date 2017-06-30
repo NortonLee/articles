@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Navicat for MySql 快捷键
-category: 技术
-tags: .NET
+category: 工具
+tags: mysql
 ---
 
 {{ page.title }}
