@@ -1,0 +1,9 @@
+---
+layout: post
+title: 六、Class和Style的绑定
+category: Vue.js
+---
+
+{{ page.title }}
+===
+>   
