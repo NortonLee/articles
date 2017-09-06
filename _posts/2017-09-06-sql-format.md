@@ -1,4 +1,5 @@
 ---
+layout: 'noneLayout'
 title: 批量生成SQL辅助工具
 category: 工具
 tags: 辅助工具
