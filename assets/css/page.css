@@ -77,7 +77,7 @@ ul.posts li > a{
 }
 
 .header-video video{
-    object-fit: cover;
+    object-fit: unset;
     min-width: 100%;
     position: absolute;
     top: 0;
