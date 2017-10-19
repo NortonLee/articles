@@ -54,7 +54,7 @@ function backgroundVideo() {
         return Math.floor(Math.random() * bg_video_array.length);
     };
     var index = random_video_num();
-    var video_html = '<video autoplay loop muted style="background-color: black;filter: blur(5px);"><source id="bg-video" src=' + bg_video_array[index] + ' type="video/mp4"></video>';
+    var video_html = '<video autoplay loop muted style="background-color: black;filter: blur(1px);"><source id="bg-video" src=' + bg_video_array[index] + ' type="video/mp4"></video>';
     $(".header-video").append(video_html);
 }
 
