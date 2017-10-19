@@ -4,7 +4,7 @@ var current_img_num;
 var img_num = 120;
 
 function backgroundImage() {
-     var img_path = '/assets/images/';
+    var img_path = '/assets/images/';
     // var img_path = 'http://localhost:8080/assets/images/';
     var random_img_num = function () {
         return Math.floor(Math.random() * img_num + 1);
@@ -38,7 +38,32 @@ function preLoadImg(url) {
     img.src = url;
 }
 
-backgroundImage();
+function backgroundVideo() {
+    var bg_video_array = [
+        "http://pic.ibaotu.com/00/29/00/66u888piCstw.mp4",
+        "http://pic.ibaotu.com/00/29/19/17W888piC8ES.mp4",
+        "http://pic.ibaotu.com/00/29/27/24A888piCGtw.mp4",
+        "http://pic.ibaotu.com/00/29/46/80K888piCHq9.mp4",
+        "http://pic.ibaotu.com/00/21/03/24j888piC9UQ.mp4",
+        "http://pic.ibaotu.com/00/29/20/04J888piCicZ.mp4",
+        "http://pic.ibaotu.com/00/21/58/30n888piCX8R.mp4",
+        "http://pic.ibaotu.com/00/27/86/49D888piCeGq.mp4",
+        "http://assets.serpent.ai/serpent_bg.mp4"
+    ];
+    var random_video_num = function () {
+        return Math.floor(Math.random() * bg_video_array.length);
+    };
+    var index = random_video_num();
+    var video_html = '<video autoplay loop muted style="background-color: black;filter: blur(5px);"><source id="bg-video" src=' + bg_video_array[index] + ' type="video/mp4"></video>';
+    $(".header-video").append(video_html);
+}
+
+var randomType = Math.floor(Math.random() * 2);
+if(randomType == 0){
+    backgroundVideo();
+}else{
+    backgroundImage()
+}
 
 // setInterval(function () {
 //     backgroundImage()
