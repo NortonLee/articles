@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="author" content="Norton.Li" />
+    <title>{{ page.title }} - @Norton.Li</title>
+    <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/css/reveal.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/lib/css/zenburn.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/css/ppt.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '{{ BASE_PATH }}/articles/assets/css/print/pdf.css' : '{{ BASE_PATH }}/articles/assets/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1a6df2e9fe5e42319ae9746603c45f5f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+    {{ content }}
+    <script src="{{ BASE_PATH }}/articles/assets/lib/js/head.min.js"></script>
+    <script src="{{ BASE_PATH }}/articles/assets/js/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: false,
+            history: false,
+            keyboard: true,
+            overview: true,
+            mouseWheel: true,
+            hideAddressBar: true,
+            loop: true,
+            center:false,
+            transition: $(".reveal").attr("transition-type"), // none/fade/slide/convex/concave/zoom
+            dependencies: [
+                { src: '{{ BASE_PATH }}/articles/assets/plugin/markdown/marked.js' },
+                { src: '{{ BASE_PATH }}/articles/assets/plugin/markdown/markdown.js' },
+                { src: '{{ BASE_PATH }}/articles/assets/plugin/notes/notes.js', async: true },
+                { src: '{{ BASE_PATH }}/articles/assets/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+            ]
+        });
+    </script>
+</body>

@@ -1,0 +1,38 @@
+.slides{
+    width:90% !important;
+    margin-top:1em !important;
+}
+.logo img{
+    height:300px;
+}
+.head{
+    top:2em;
+    left:2em;
+    text-align:left;
+    border-bottom:2px solid #ccc  !important;
+}
+.content{
+    text-align:left;
+    padding:2em !important;
+    font-size:80% !important;
+}
+.content div{
+    padding: .2em 0;
+}
+.content .font-bold{
+    font-weight:bold;
+}
+.sub-content{
+    text-align:left;
+    padding:0 2em !important;
+    font-size:80% !important;
+}
+.sub-content li{
+    padding:.4em 0 !important;
+}
+.reveal pre{
+    margin:0 !important;
+}
+table{
+    font-size:20px !important;
+}
