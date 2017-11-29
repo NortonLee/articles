@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/css/reveal.css">
     <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/lib/css/zenburn.css">
     <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/css/ppt.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}/articles/assets/css/font-awesome.min.css" type="text/css" media="screen, projection"
+    />
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <!-- Printing and PDF exports -->
     <script>
@@ -33,9 +35,37 @@
 <body>
     <div class="pc">PC端体验效果更佳哦</div>
     {{ content }}
+
+    <div class="first-page">
+        <div>李驰</div>
+        <div>Norton.Li</div>
+    </div>
+    <div class="last-page">
+        <div>
+            <ul>
+                <li>
+                    <a href="http://www.nortonli.me/">
+                        <i class="fa fa-link"></i>
+                    </a>
+                    <a class="link" href="http://www.nortonli.me/">nortonli.me</a>
+                </li>
+                <li>
+                    <a href="https://www.github.com/nortonlee/">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a class="link" href="https://www.github.com/nortonlee/">NortonLee</a>
+                </li>
+                <li>
+                    <a href="{{ BASE_PATH }}\articles\">
+                        <i class="fa fa-rss"></i>
+                    </a>
+                    <a class="link" href="{{ BASE_PATH }}\articles\">ReadMore</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <script src="{{ BASE_PATH }}/articles/assets/lib/js/head.min.js"></script>
     <script src="{{ BASE_PATH }}/articles/assets/js/reveal.js"></script>
-
     <script>
         Reveal.initialize({
             controls: true,
@@ -47,7 +77,7 @@
             mouseWheel: true,
             hideAddressBar: true,
             loop: true,
-            center:false,
+            center: false,
             transition: $(".reveal").attr("transition-type"), // none/fade/slide/convex/concave/zoom
             dependencies: [
                 { src: '{{ BASE_PATH }}/articles/assets/plugin/markdown/marked.js' },
@@ -56,5 +86,7 @@
                 { src: '{{ BASE_PATH }}/articles/assets/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
             ]
         });
+        $("section").last().append($(".last-page"));
+        $("section").first().append($(".first-page"));
     </script>
 </body>
