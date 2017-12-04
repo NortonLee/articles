@@ -202,13 +202,13 @@ a{
     animation-timing-function:ease-in-out;
     animation-iteration-count:1;
     animation-fill-mode:forwards;
-    -webkit-animation:showQR 3s ease-in-out 0s 1 normal forwards;
+    -webkit-animation:showQR .3s ease-in 0s 1 normal forwards;
 }
 @keyframes showQR {
 	from {
-		transform: rotateX(90deg);
+		transform: rotateY(180deg);
 	}
-	8% {
+	/* 8% {
 		opacity: 1;
 		transform: rotateX(-60deg);
 	}
@@ -239,7 +239,7 @@ a{
 	96% {
 		opacity: 1;
 		transform: rotateX(2deg);
-	}
+	} */
 	to {
 		opacity: 1;
 	}
