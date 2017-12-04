@@ -23,10 +23,10 @@ jQuery(document).ready(function() {
 			// new Clipboard('#BTCBn');
 		} else if (thisID === 'AliPay') {
 			showQR(AliPayQR);
-			$(".pay-url").attr("href",AliPayQR);
+			$(".pay-url").attr("href",'/articles/assets/images/谢谢打赏-支付宝.jpg');
 		} else if (thisID === 'WeChat') {
 			showQR(WeChanQR);
-			$(".pay-url").attr("href",WeChanQR);
+			$(".pay-url").attr("href",'/articles/assets/images/谢谢打赏-微信.jpg');
 		}
 	});
 
