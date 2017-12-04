@@ -79,6 +79,7 @@ ul.posts li > a{
 .header-video video{
     object-fit: unset;
     min-width: 100%;
+    max-width: 100%;
     position: absolute;
     top: 0;
     z-index: 0 !important;
