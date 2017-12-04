@@ -23,8 +23,10 @@ jQuery(document).ready(function() {
 			// new Clipboard('#BTCBn');
 		} else if (thisID === 'AliPay') {
 			showQR(AliPayQR);
+			$(".pay-url").attr("href",AliPayQR);
 		} else if (thisID === 'WeChat') {
 			showQR(WeChanQR);
+			$(".pay-url").attr("href",WeChanQR);
 		}
 	});
 
