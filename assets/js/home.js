@@ -1,7 +1,7 @@
 var current_image;
 var next_img_num = 0;
 var current_img_num;
-var img_num = 120;
+var img_num = 944;
 
 function backgroundImage() {
     var img_path = '/assets/images/';
