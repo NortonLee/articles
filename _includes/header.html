@@ -1,21 +1,14 @@
-<div id='wx_logo' style="height:0;width:100%;">
-    <img style="height:0;width:0;" src='{{ BASE_PATH }}/assets/images/logo.jpg' />
-</div>
-<div class="header">
-    <div class="header-video"></div>
+<header class="header">
     <div class="header-content">
         <p><a class="sub-home" href="/articles/">Norton.Li|李驰</a></p>
         <div class="sub-title">wěn住 我们能赢</div>
-        <ul>
-            <li><a class="ico-home" href="/"><i class="fa fa-home"></a></i>
-            </li>
-            <li><a class="ico-wechat" href="{{ BASE_PATH }}/articles/assets/images/wx.png" target="_blank"><i class="fa fa-wechat"></a></i>
-            </li>
-            <li><a class="ico-weibo" href="http://www.weibo.com/345957657"><i class="fa fa-weibo"></i></a></li>
-            <li><a class="ico-github" href="https://www.github.com/nortonlee/"><i class="fa fa-github"></a></i>
-            </li>
-        </ul>
-        <span id="img_placer"></span>
+        
+        <nav class="header-nav">
+            <a href="/articles/" title="Home"><i class="fa fa-home"></i></a>
+            <a href="/articles/tags.html" title="Tags"><i class="fa fa-tags"></i></a>
+            <a href="{{ BASE_PATH }}/articles/assets/images/wx.png" target="_blank" title="WeChat"><i class="fa fa-wechat"></i></a>
+            <a href="http://www.weibo.com/345957657" target="_blank" title="Weibo"><i class="fa fa-weibo"></i></a>
+            <a href="https://www.github.com/nortonlee/" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+        </nav>
     </div>
-</div>
-<script src="{{ BASE_PATH }}/articles/assets/js/home.js"></script>
+</header>

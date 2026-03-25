@@ -2,37 +2,119 @@
 layout: default
 ---
 
-<div class="post-content">
-  <div id="post">
-    {{ content }}
-  </div>
-  <div class="tags">
-   {% for tag in site.tags %}
-        {% if page.tags contains tag.first %}
-        <span><a target="_blank" href="/articles/taglist.html">{{tag.first}}</a></span>
+<article class="post-content">
+    <a href="/articles/" class="back-home">
+        <i class="fa fa-arrow-left"></i> Back to Articles
+    </a>
+
+    <header class="post-header">
+        <div class="post-meta">
+            {% if page.categories.size > 0 %}
+                <span class="category">{{ page.categories.first }}</span>
+            {% endif %}
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %d, %Y" }}
+            </time>
+            {% if page.author %}
+                <span>by {{ page.author }}</span>
+            {% endif %}
+        </div>
+        <h1>{{ page.title }}</h1>
+        
+        {% if page.tags.size > 0 %}
+            <div class="tags" style="margin-top: 1rem;">
+                {% for tag in page.tags %}
+                    <a href="#" class="tag">#{{ tag }}</a>
+                {% endfor %}
+            </div>
         {% endif %}
-   {% endfor %}
-  </div>
+    </header>
 
-  {% include reward.html %}
+    <!-- Table of Contents (auto-generated from headings) -->
+    <div class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul id="toc-list"></ul>
+    </div>
 
-  <div id="related">
-    <h2>Latest Post</h2>
-    <ul class="related-post">
-      {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="/articles{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
-<!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="{{page.title}}"></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cysY47hMv'; 
-var conf = 'prod_bcfff3456060dc23cd050686b960217c'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-<!--分享按钮-->
-<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=3&amp;fs=4&amp;textcolor=#000&amp;bgcolor=#DDD&amp;text=分享到"></script>
+    {{ content }}
+
+    <hr>
+
+    <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+        <div class="post-meta" style="justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <strong>Author:</strong> 
+                <a href="https://github.com/nortonlee" target="_blank">Norton.Li</a>
+            </div>
+            <div>
+                <strong>Tags:</strong>
+                {% if page.tags.size > 0 %}
+                    {% for tag in page.tags %}
+                        <a href="#" class="tag">#{{ tag }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="/articles/" class="back-home" style="font-size: 1.1rem;">
+                <i class="fa fa-arrow-left"></i> View All Articles
+            </a>
+        </div>
+    </footer>
+</article>
+
+<script>
+// Auto-generate Table of Contents
+document.addEventListener('DOMContentLoaded', function() {
+    const content = document.querySelector('.post-content');
+    if (!content) return;
+    
+    const headings = content.querySelectorAll('h1, h2, h3, h4');
+    const tocList = document.getElementById('toc-list');
+    
+    if (!headings.length && !tocList) return;
+    
+    // Remove empty TOC if no headings
+    if (!headings.length) {
+        const tocContainer = document.querySelector('.toc');
+        if (tocContainer) tocContainer.remove();
+        return;
+    }
+    
+    headings.forEach(function(heading, index) {
+        const id = 'heading-' + index;
+        heading.id = id;
+        
+        const li = document.createElement('li');
+        li.className = 'toc-h' + heading.tagName.toLowerCase().charAt(1);
+        
+        const a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = heading.textContent;
+        a.onclick = function(e) {
+            e.preventDefault();
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            history.pushState(null, null, '#' + id);
+        };
+        
+        li.appendChild(a);
+        tocList.appendChild(li);
+    });
+    
+    // Reading progress bar
+    const progressBar = document.createElement('div');
+    progressBar.className = 'progress-container';
+    const bar = document.createElement('div');
+    bar.className = 'progress-bar';
+    progressBar.appendChild(bar);
+    document.body.appendChild(progressBar);
+    
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        bar.style.width = scrolled + '%';
+    });
+});
+</script>

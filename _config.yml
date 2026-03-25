@@ -3,13 +3,26 @@ destination: ./_site
 github: NortonLee
 author: 'Norton.Li|李驰'
 baseurl:     '/articles'
-gems:  [tzinfo]
+gems:  [jekyll-paginate, tzinfo]
 markdown: kramdown
 markdown_ext:  markdown,mkd,mkdn,md
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title
+paginate: 12
+paginate_path: "/page:num/"
+jekyll-paginate:
+  enabled: true
+  per_page: 12
+  title: 'Page - :num'
+  trail:
+    before: 2
+    after: 2
+nav:
+  - title: "Home"
+    url: "/articles/"
+  - title: "Tags"
+    url: "/articles/tags.html"
 all_categories: [
   ["tech", "技术","/posts/tech.html"], 
   ["tools", "工具","/posts/tools.html"]
 ]
-# paginate: 8
