@@ -5,11 +5,7 @@ title: Blog - Norton.Li
 
 <div id="home">
     <div class="category-header">
-        <h1>📚 Technical Articles</h1>
-        <p style="color: var(--text-muted); margin-top: 0.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Focus on Frontend Development, AI Engineering, and Software Best Practices
-            <br>by <a href="https://github.com/nortonlee" target="_blank" style="color: var(--accent);">Norton.Li</a>
-        </p>
+        <h1>📚 文章列表</h1>
         
         <!-- Quick Tag Navigation -->
         <div style="margin-top: 2rem;">
@@ -26,12 +22,12 @@ title: Blog - Norton.Li
                 {% for tag in sorted_tags limit:15 %}
                     {% assign tag_name = tag[0] %}
                     {% assign count = tag[1].size %}
-                    <a href="/articles/tags.html#tag-{{ tag_name | slugify }}" class="quick-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem; background: var(--bg-tertiary); color: var(--text-primary); text-decoration: none; border-radius: 999px; border: 1px solid var(--border); transition: var(--transition);">
+                    <a href="{{ site.baseurl }}/tags.html#tag-{{ tag_name | slugify }}" class="quick-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem; background: var(--bg-tertiary); color: var(--text-primary); text-decoration: none; border-radius: 999px; border: 1px solid var(--border); transition: var(--transition);">
                         #{{ tag_name }} <span style="background: var(--accent); color: white; padding: 0.1rem 0.4rem; border-radius: 999px; font-size: 0.75rem; margin-left: 0.3rem;">{{ count }}</span>
                     </a>
                 {% endfor %}
                 
-                <a href="/articles/tags.html" class="quick-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem; background: var(--accent); color: white; text-decoration: none; border-radius: 999px;">
+                <a href="{{ site.baseurl }}/tags.html" class="quick-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem; background: var(--accent); color: white; text-decoration: none; border-radius: 999px;">
                     View all tags →
                 </a>
             </div>

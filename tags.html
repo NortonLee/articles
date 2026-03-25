@@ -87,7 +87,7 @@ title: Tags - Norton.Li
                         <article class="post-card" style="margin-bottom: 1rem; padding: 1.25rem;">
                             <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
                             <h3 class="post-title">
-                                <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+                                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                             </h3>
                             {% if post.excerpt %}
                                 <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
@@ -108,7 +108,7 @@ title: Tags - Norton.Li
                 
                 {% if tag_posts.size > 5 %}
                     <div style="text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border);">
-                        <a href="#" class="view-all-btn" data-tag="{{ tag_name }}" onclick="alert('Navigate to: /articles/?tag={{ tag_name | uri_escape }}'); return false;" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-weight: 600;">
+                        <a href="#" class="view-all-btn" data-tag="{{ tag_name }}" onclick="alert('Navigate to: {{ site.baseurl }}/?tag={{ tag_name | uri_escape }}'); return false;" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-weight: 600;">
                             Show all {{ tag_posts.size }} articles with #{{ tag_name }}
                             <i class="fa fa-arrow-right" style="font-size: 0.8rem;"></i>
                         </a>
