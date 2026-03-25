@@ -1,23 +1,53 @@
 {% if site.paginate %}
-  <div class="pagination">
+  <div class="pagination" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.5rem; margin: 2rem 0;">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}">&larr; Previous</a>
+      <a href="{{ paginator.previous_page_path }}" class="page-nav prev" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text-primary);">&larr; Previous</a>
     {% else %}
-      <span>&larr; Previous</span>
+      <span class="page-nav prev disabled" style="padding: 0.5rem 1rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-muted);">&larr; Previous</span>
     {% endif %}
 
-    {% for page in (1..paginator.total_pages) %}
+    {% assign max_pages_to_show = 7 %}
+    {% assign half = max_pages_to_show | divided_by: 2 %}
+    {% assign start_page = paginator.page | minus: half %}
+    {% assign end_page = paginator.page | plus: half %}
+
+    {% if start_page < 1 %}
+      {% assign end_page = end_page | plus: 1 | minus: start_page %}
+      {% assign start_page = 1 %}
+    {% endif %}
+
+    {% if end_page > paginator.total_pages %}
+      {% assign start_page = start_page | minus: end_page | plus: paginator.total_pages %}
+      {% assign start_page = start_page | max: 1 %}
+      {% assign end_page = paginator.total_pages %}
+    {% endif %}
+
+    {% if start_page > 1 %}
+      <a href="{{ site.paginate_path | replace: ':num', 1 }}" class="page-num" style="padding: 0.4rem 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text-primary);">1</a>
+      {% if start_page > 2 %}
+        <span class="page-ellipsis" style="color: var(--text-muted);">…</span>
+      {% endif %}
+    {% endif %}
+
+    {% for page in (start_page..end_page) %}
       {% if page == paginator.page %}
-        <span class="current">{{ page }}</span>
+        <span class="page-num current" style="padding: 0.4rem 0.8rem; background: var(--accent); border: 1px solid var(--accent); border-radius: 6px; color: white; font-weight: 600;">{{ page }}</span>
       {% else %}
-        <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
+        <a href="{{ site.paginate_path | replace: ':num', page }}" class="page-num" style="padding: 0.4rem 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text-primary);">{{ page }}</a>
       {% endif %}
     {% endfor %}
 
+    {% if end_page < paginator.total_pages %}
+      {% if end_page < paginator.total_pages | minus: 1 %}
+        <span class="page-ellipsis" style="color: var(--text-muted);">…</span>
+      {% endif %}
+      <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}" class="page-num" style="padding: 0.4rem 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text-primary);">{{ paginator.total_pages }}</a>
+    {% endif %}
+
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}">Next &rarr;</a>
+      <a href="{{ paginator.next_page_path }}" class="page-nav next" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text-primary);">Next &rarr;</a>
     {% else %}
-      <span>Next &rarr;</span>
+      <span class="page-nav next disabled" style="padding: 0.5rem 1rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-muted);">Next &rarr;</span>
     {% endif %}
   </div>
 {% endif %}
